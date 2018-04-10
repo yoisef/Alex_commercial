@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#000</color>
+    <color name="gray">#7F8C8D</color>
+    <color name="blue">#3498DB </color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="publicap"> #EEEEEE</color>
+    <color name="green">#1B5E20</color>
+    <color name="grayfat7">#E0E0E0</color>
+    <color name="blues">#303F9F</color>
+    <color name="gray1">#E0E0E0</color>
+    <color name="gray2">#BDBDBD</color>
+    <color name="gray3">#757575</color>
+</resources>
