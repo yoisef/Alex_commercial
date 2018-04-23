@@ -53,8 +53,8 @@ public class menu extends Fragment {
         recyclerView=(RecyclerView)view.findViewById(R.id.menurec);
         LinearLayoutManager manager=new LinearLayoutManager(context);
         recyclerView.setLayoutManager(manager);
-      //  menuadapter adapter=new menuadapter(context);
-      //  recyclerView.setAdapter(adapter);
+        menuadapter adapter=new menuadapter(context);
+       recyclerView.setAdapter(adapter);
 
     }
 
@@ -63,7 +63,7 @@ public class menu extends Fragment {
         super.onStart();
 
         final FirebaseAuth mauth=FirebaseAuth.getInstance();
-        menuadapter adapter=new menuadapter(context);
+        final menuadapter adapter=new menuadapter(context);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
@@ -71,18 +71,27 @@ public class menu extends Fragment {
                         switch (position)
                         {
                             case 0:
-                                Toast.makeText(context,"hi",Toast.LENGTH_SHORT).show();
+                               Intent i=new Intent(context,Userprofile.class);
+                                startActivity(i);
                                 break;
-                            case 1:Toast.makeText(context,"الحمد لله",Toast.LENGTH_SHORT).show();
+                            case 1:Intent j=new Intent(context,studytables.class);
+                                startActivity(j);
                                 break;
                             case 5:{
                                 mauth.signOut();
-                                Intent i=new Intent(context,MainActivity.class);
-                                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                startActivity(i);
+                                getActivity().finish();
+                                Intent a=new Intent(context,MainActivity.class);
+                                a.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(a);
                                 break;
                             }
-                            default:Toast.makeText(context,"العادي",Toast.LENGTH_SHORT).show();
+                            case 4:Intent f=new Intent(context,Aboutme.class);
+                                startActivity(f);
+                                break;
+                            case 2:Intent l=new Intent(context,studytables.class);
+                                startActivity(l);
+                                break;
+                            default:Toast.makeText(context,"No data yet",Toast.LENGTH_SHORT).show();
                         }
                     }
 

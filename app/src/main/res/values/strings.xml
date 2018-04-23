@@ -4,11 +4,23 @@
     <string name="term2">Second Term</string>
     <string name="radio_male">Male</string>
     <string name="radio_female">Female</string>
+    <string name="Defaultname">اسم المستخدم</string>
 
     <string-array name="studyteams">
         <item>First Year</item>
         <item>Second Year</item>
         <item>Third Year</item>
         <item>Forth Year</item>
+    </string-array>
+
+    <string-array name="sectionname">
+        <item>شعبة المحاسبة</item>
+        <item>شعبة ادارة الاعمال</item>
+        <item>شعبة الاقتصاد</item>
+        <item>شعبة الدراسات المالية والجمركية</item>
+        <item>شعبة الاحصاء التطبقي</item>
+        <item>شعبة نظم المعلومات</item>
+        <item>شعبة العلوم السياسية</item>
+
     </string-array>
 </resources>

@@ -1,4 +1,4 @@
-package youssef.com.alex_commercial;
+package youssef.com.alex_commercial.forthyear;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,13 +9,18 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+
+import com.bumptech.glide.Glide;
+
+import youssef.com.alex_commercial.R;
 
 /**
  * Created by mohamed on 01/04/2018.
  */
 
-public class Fyear extends android.support.v4.app.Fragment {
+public class Fouryear extends android.support.v4.app.Fragment {
 
 
     TabLayout tabLayout;
@@ -25,13 +30,20 @@ public class Fyear extends android.support.v4.app.Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-                return     inflater.inflate(R.layout.fyear,container,false);
+        return     inflater.inflate(R.layout.fyear,container,false);
 
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
+        ImageView img=(ImageView)view.findViewById(R.id.sectionview);
+        String photo="http://shbabbek.com/upload/20160918194013_107606_SHJ.jpg";
+        Glide.with(this)
+                .load(photo)
+                .into(img);
 
         progressBar=(ProgressBar)view.findViewById(R.id.waitprogressbar);
 
@@ -51,14 +63,19 @@ public class Fyear extends android.support.v4.app.Fragment {
 
         public adapter(FragmentManager fm){
             super(fm);
+
+            fm.beginTransaction().addToBackStack("Firstyear").commit();
         }
 
         @Override
         public android.support.v4.app.Fragment getItem(int position) {
 
             android.support.v4.app.Fragment fragment;
-            if (position==0)
-                return fragment=new termone();
+            if (position==0) {
+
+
+                return fragment = new termone();
+            }
             if  (position==1)
                 return fragment=new termseond();
 

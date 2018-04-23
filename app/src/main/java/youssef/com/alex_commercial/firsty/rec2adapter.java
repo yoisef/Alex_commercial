@@ -1,4 +1,4 @@
-package youssef.com.alex_commercial;
+package youssef.com.alex_commercial.firsty;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Map;
+
+import youssef.com.alex_commercial.R;
 
 /**
  * Created by mohamed on 07/04/2018.
@@ -125,8 +127,37 @@ public class rec2adapter extends RecyclerView.Adapter<rec2adapter.myviewholder> 
             public void onClick(View view) {
                 switch (z) {
                     case 0: {
-                        Intent i = new Intent(contextt, Comment.class);
+
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.firsty.comments.term2.Comment1.class);
                         contextt.startActivity(i);
+                        break;
+                    }
+                    case 1:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.firsty.comments.term2.Comment2.class);
+                        contextt.startActivity(i);
+                        break;
+                    }
+
+                    case 2: {
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.firsty.comments.term2.Comment3.class);
+                        contextt.startActivity(i);
+                        break;
+                    }
+                    case 3:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.firsty.comments.term2.Comment4.class);
+                        contextt.startActivity(i);
+                        break;
+
+                    }
+                    case 4:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.firsty.comments.term2.Comment5.class);
+                        contextt.startActivity(i);
+                        break;
+                    }
+                    case 5:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.firsty.comments.term2.Comment6.class);
+                        contextt.startActivity(i);
+                        break;
                     }
                 }
             }

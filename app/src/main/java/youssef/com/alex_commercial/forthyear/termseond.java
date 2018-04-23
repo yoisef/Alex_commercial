@@ -1,4 +1,4 @@
-package youssef.com.alex_commercial;
+package youssef.com.alex_commercial.forthyear;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import youssef.com.alex_commercial.R;
 
 /**
  * Created by mohamed on 02/04/2018.

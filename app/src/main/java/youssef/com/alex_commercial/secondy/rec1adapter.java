@@ -1,4 +1,4 @@
-package youssef.com.alex_commercial;
+package youssef.com.alex_commercial.secondy;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Map;
 
+import youssef.com.alex_commercial.R;
+
 /**
  * Created by mohamed on 05/04/2018.
  */
@@ -29,22 +31,17 @@ public class rec1adapter extends RecyclerView.Adapter<rec1adapter.myviewholder> 
 
     Context contextt;
 
-    ArrayList<String> matrieal = new ArrayList<>();
-    RecyclerView recv1, recv2;
+    RecyclerView recv1;
 
-    String dom, doce, doctyad, vevo, zezo, lezo;
     ArrayList<matriealanddoctor> arraylist;
-
-
-    ArrayList<String> doctors = new ArrayList<>();
-    int[] numbers = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six};
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-    DatabaseReference refmatrieal = database.getReference("yeat1").child("term1");
+    DatabaseReference refmatrieal = database.getReference("year2").child("term1");
 
     public rec1adapter(Context context, View view) {
         this.contextt = context;
+
         recv1 = (RecyclerView) view.findViewById(R.id.recycle1);
 
         arraylist = new ArrayList<>();
@@ -72,6 +69,8 @@ public class rec1adapter extends RecyclerView.Adapter<rec1adapter.myviewholder> 
         }
 
 
+
+
     }
 
 
@@ -87,7 +86,9 @@ public class rec1adapter extends RecyclerView.Adapter<rec1adapter.myviewholder> 
 
 
     @Override
-    public void onBindViewHolder(final myviewholder holder, final int position) {
+    public void onBindViewHolder(final myviewholder holder, int position) {
+
+        final int z= ((int) holder.getAdapterPosition());
         matriealanddoctor exmple = arraylist.get(position);
 
 
@@ -99,7 +100,7 @@ public class rec1adapter extends RecyclerView.Adapter<rec1adapter.myviewholder> 
         holder.download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (position) {
+                switch (z) {
                     case 0:
                         Intent site, chooser;
                         site = new Intent(Intent.ACTION_VIEW);
@@ -120,17 +121,45 @@ public class rec1adapter extends RecyclerView.Adapter<rec1adapter.myviewholder> 
         holder.comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (position) {
+                switch (z) {
                     case 0: {
-                        Intent i = new Intent(contextt, Comment.class);
+
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.secondy.comments.term1.Comment1.class);
                         contextt.startActivity(i);
+                             break;
                     }
+                    case 1:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.secondy.comments.term1.Comment2.class);
+                        contextt.startActivity(i);
+                        break;
+                    }
+
+                    case 2: {
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.secondy.comments.term1.Comment3.class);
+                        contextt.startActivity(i);
+                        break;
+                    }
+                    case 3:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.secondy.comments.term1.Comment4.class);
+                        contextt.startActivity(i);
+                        break;
+
+                    }
+                    case 4:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.secondy.comments.term1.Comment5.class);
+                        contextt.startActivity(i);
+                        break;
+                    }
+                    case 5:{
+                        Intent i = new Intent(contextt, youssef.com.alex_commercial.secondy.comments.term1.Comment6.class);
+                        contextt.startActivity(i);
+                        break;
+                    }
+
+
                 }
             }
         });
-
-
-
 
 
     }
@@ -157,4 +186,5 @@ public class rec1adapter extends RecyclerView.Adapter<rec1adapter.myviewholder> 
            matphoto = (ImageView) itemView.findViewById(R.id.photo);
         }
     }
+
 }

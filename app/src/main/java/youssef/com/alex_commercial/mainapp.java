@@ -12,6 +12,11 @@ import android.widget.ImageView;
 
 import com.roughike.bottombar.BottomBar;
 
+import youssef.com.alex_commercial.firsty.Fyear;
+import youssef.com.alex_commercial.forthyear.section2;
+import youssef.com.alex_commercial.secondy.Syear;
+import youssef.com.alex_commercial.thirdy.section;
+
 public class mainapp extends AppCompatActivity {
 
 
@@ -33,6 +38,8 @@ public class mainapp extends AppCompatActivity {
 
 
         navigationView=(BottomNavigationView)findViewById(R.id.botomview);
+        menu fu=new menu();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame,fu).commit();
        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -55,6 +62,16 @@ public class mainapp extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame,tu).commit();
                         break;
                     }
+                    case R.id.three:{
+                       // Tyear as=new Tyear();
+                        section mysec=new section();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame,mysec).commit();
+                        break;
+                    }
+                    case R.id.four:{
+                        section2 sec=new section2();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame,sec).commit();
+                    }
                 }
                 return true;
             }
@@ -63,13 +80,15 @@ public class mainapp extends AppCompatActivity {
 
 
     }
-
+/*
     @Override
     protected void onStart() {
         super.onStart();
         menu fu=new menu();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame,fu).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame,fu).addToBackStack("menuf").commit();
     }
+    */
+
 }
 
 

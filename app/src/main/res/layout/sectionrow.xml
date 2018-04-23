@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/publiccolor"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+   android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:background="@drawable/ripple"
+
+
+
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="35dp"
+        android:layout_gravity="center"
+        android:id="@+id/sectionjpg"
+
+        android:layout_height="35dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/sectionname"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:text="بhiحاسبة"/>
+</LinearLayout>
+</LinearLayout>

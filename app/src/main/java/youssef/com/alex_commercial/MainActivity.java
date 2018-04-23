@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
         {
             user_email.setError("Email is required");
             user_email.requestFocus();
-            log_in.setClickable(false);
-            log_in.setTextColor(Color.BLUE);
+
+
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
         {
             user_password.setError("Password is required");
             user_password.requestFocus();
-            log_in.setClickable(false);
-            log_in.setBackgroundColor(Color.WHITE);
-            log_in.setTextColor(Color.BLUE);
+
+
+
             return;
         }
         if (passwordd.length()<6)

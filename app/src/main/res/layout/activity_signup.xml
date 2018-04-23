@@ -25,7 +25,19 @@
            android:id="@+id/textView3" />-->
 
 
+    <ProgressBar
+        android:id="@+id/probar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:indeterminateOnly="true"
 
+        android:indeterminateTint="@color/blue"
+        android:indeterminateTintMode="src_in"
+        android:visibility="invisible" />
 
     <EditText
         android:id="@+id/useremail"
@@ -100,16 +112,7 @@
             android:textStyle="bold"
             android:typeface="serif" />
 
-        <ProgressBar
-            android:id="@+id/probar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:indeterminateTint="@color/blue"
-            android:indeterminateTintMode="src_in"
-            android:visibility="visible" />
+
     </RelativeLayout>
 
     <ImageView

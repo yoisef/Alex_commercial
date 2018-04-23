@@ -1,7 +1,6 @@
 package youssef.com.alex_commercial;
 
 import android.content.Context;
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +17,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import youssef.com.alex_commercial.firsty.comments.Usermodel;
 
 /**
  * Created by mohamed on 08/04/2018.
@@ -74,13 +73,29 @@ public class menuadapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
 
-                      Userinfo currentuser=  dataSnapshot.getValue(Userinfo.class);
+                      Usermodel currentuser=  dataSnapshot.getValue(Usermodel.class);
+                              if (currentuser.name!=null) {
+                                  ((Myviewheadr) holder).name.setText(currentuser.name);
+                              }
+                              if (currentuser.name==null){
+                                  ((Myviewheadr) holder).name.setText("اسم المستخدم");
 
-                        ((Myviewheadr) holder).name.setText(currentuser.name);
+                              }
 
-                        Glide.with(con)
-                                .load(currentuser.photo)
-                                .into(((Myviewheadr) holder).personphoto);
+                              if (currentuser.photo!=null)
+                              {
+                                  Glide.with(con.getApplicationContext())
+                                          .load(currentuser.photo)
+                                          .into(((Myviewheadr) holder).personphoto);
+
+                              }
+
+                              else{
+                                  String Defaultphoto="https://scontent-cai1-1.xx.fbcdn.net/v/t1.0-1/c71.0.240.240/p240x240/10354686_10150004552801856_220367501106153455_n.jpg?_nc_cat=0&oh=d88c1f6acb2c0546336be91e342b5031&oe=5B276958";
+                                  Glide.with(con.getApplicationContext())
+                                        .load(Defaultphoto)
+                                          .into(((Myviewheadr) holder).personphoto);
+                              }
 
                     }
 

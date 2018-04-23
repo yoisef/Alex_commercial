@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="youssef.com.alex_commercial">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -9,17 +11,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mainapp" />
-        <activity android:name=".Comment" />
-        <activity android:name=".Signup" />
-        <activity android:name=".Userprofile"></activity>
+        <activity
+            android:name=".mainapp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".firsty.comments.term1.Comment1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Signup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Userprofile"
+            android:screenOrientation="portrait" />
+        <activity android:name=".firsty.comments.term1.Comment2" />
+        <activity android:name=".firsty.comments.term1.Comment3" />
+        <activity android:name=".firsty.comments.term1.Comment4" />
+        <activity android:name=".firsty.comments.term1.Comment5" />
+        <activity android:name=".firsty.comments.term1.Comment6" />
+        <activity android:name=".firsty.comments.term2.Comment1" />
+        <activity android:name=".firsty.comments.term2.Comment2" />
+        <activity android:name=".firsty.comments.term2.Comment3" />
+        <activity android:name=".firsty.comments.term2.Comment4" />
+        <activity android:name=".firsty.comments.term2.Comment5" />
+        <activity android:name=".firsty.comments.term2.Comment6" />
+        <activity android:name=".secondy.comments.term1.Comment1" />
+        <activity android:name=".secondy.comments.term1.Comment2" />
+        <activity android:name=".secondy.comments.term1.Comment3" />
+        <activity android:name=".secondy.comments.term1.Comment4" />
+        <activity android:name=".secondy.comments.term1.Comment5" />
+        <activity android:name=".secondy.comments.term1.Comment6" />
+        <activity android:name=".Aboutme" />
+        <activity android:name=".studytables">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
